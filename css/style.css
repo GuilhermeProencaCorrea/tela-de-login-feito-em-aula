@@ -1,0 +1,67 @@
+:root{
+    --Fundo:#151320;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Fundo);
+    height: 600px;
+}
+.titulo-login{
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #151320;
+}
+.Boxlogin{
+    border: 1px solid gray;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: fit-content;
+    height: auto;
+    padding: 20px;
+    padding-bottom: 50px;
+    border-radius: 10px;
+}
+.grupo{
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+    flex-direction: column;
+}
+.grupo-esqueci-senha{
+    width: 100%;
+    display: flex;
+    font-size: 12px;
+    justify-content: flex-end;
+    margin: 2px;
+}
+#email{
+    border: 1px solid gray;
+    border-radius: 2px;
+    padding: 2px;
+    height: 30px;
+}
+#password{
+    border: 1px solid gray;
+    border-radius: 2px;
+    padding: 2px;
+    height: 30px;  
+}
+#button-login{
+    width: 100%;
+    padding: 5px;
+    margin: 10px;
+    background-color: #151320;
+    color: white;
+    border: none;
+    font: bold;
+    cursor: pointer;
+    border-radius: 2px;
+}
+#button-login:hover{
+    background-color: #151320c5;
+}
