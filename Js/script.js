@@ -1,4 +1,7 @@
-function loginEntra () {
+
+let button = document.getElementById("button-login");
+
+button.addEventListener("click", () => {
     let email = document.getElementById("email").value;
     let senha = document.getElementById("senha").value;
     if(senha== 123 && email=='exemplo@gmail.com'){
@@ -6,4 +9,4 @@ function loginEntra () {
     }else{
         alert("Senha ou e-mail incorretos!");
     }
-}
+});
