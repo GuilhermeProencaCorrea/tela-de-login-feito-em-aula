@@ -6,7 +6,8 @@ body{
     align-items: center;
     justify-content: center;
     background-color: var(--Fundo);
-    height: 600px;
+    width: 100vw;
+    height: 100vh;
 }
 .titulo-login{
     margin-bottom: 10px;
