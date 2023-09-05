@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./../css/reset.css">
     <link rel="stylesheet" href="./../css/home.css">
 
@@ -18,14 +18,27 @@
                     <li><a href="">Cadastro produto</a></li>
                     <li><a href="">Clientes</a></li>
                     <li><a href="">Produtos</a></li>
-                    <li></li>
                 </ul>
             </div>            
             <div class="nav-right">
                 <ul>
-                    <li class="material-icons" style="font-size:48px;color:white"></li></li>
-                    <li><a href="">admin@gmail.com</a></li>
-                    <li><a href="">Sair</a></li>  
+                    <li>
+                        <input type="checkbox" name="change-theme" id="change-theme">
+                        <label for="change-theme">
+                            <i class="bi bi-sun"></i>
+                            <i class="bi bi-moon"></i>
+                        </label>
+                    </li>
+                    <li>
+                        <a href="">admin@gmail.com
+                            <i class="bi bi-person"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">Sair
+                            <i class="bi bi-door-open-fill"></i>
+                        </a>
+                    </li>  
                 </ul>
             </div>
         </nav>
@@ -33,8 +46,10 @@
             
             
         </main>
-        <footer></footer>
+        <footer>
+            <strong>Copyright © 2023 Guilhreme Proença Corrêa.</strong>
+        </footer>
     </div>
-    
+    <script src="./../Js/home.js"></script>
 </body>
 </html>

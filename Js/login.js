@@ -50,11 +50,7 @@ function autenticar(email, senha){
      
             }else{
                 // alert("Usuario autenticado com sucesso!");
-                Swal.fire(
-                    'Good job!',
-                    'Usuario autenticado com sucesso!',
-                    'success'
-                  )
+                alert("Usuario autenticado com sucesso!");
      
                 salvarToken(response.token);
                 salvarUsuario(response.usuario);

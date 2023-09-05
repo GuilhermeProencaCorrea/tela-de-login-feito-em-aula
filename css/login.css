@@ -1,78 +1,87 @@
-:root{
-    --Fundo:#151320;
+:root {
+  --Fundo_titulo_botao: #151320;
+  --Box-login_e_brilho: #eceff1;
 }
-body{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--Fundo);
-    width: 100vw;
-    height: 100vh;
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--Fundo_titulo_botao);
+  width: 100vw;
+  height: 100vh;
 }
-.titulo-login{
-    margin-bottom: 10px;
-    font-size: 20px;
-    color: #151320;
+.titulo-login {
+  margin-bottom: 10px;
 }
-.Boxlogin{
-    border: 1px solid gray;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: fit-content;
-    height: auto;
-    padding: 20px;
-    padding-bottom: 50px;
-    border-radius: 10px;
-    box-shadow: 0px 10px 40px -12px #f0eeec7e;
+h1 {
+  /* display: none; */
+  font-weight: 900;
+  color: var(--Fundo_titulo_botao);
 }
-.grupo{
-    display: flex;
-    margin-top: 10px;
-    justify-content: center;
-    flex-direction: column;
+span {
+  font-weight: 900;
+  font-size: ;
+  font-size: 900px;
 }
-.grupo-esqueci-senha{
-    width: 100%;
-    display: flex;
-    font-size: 12px;
-    justify-content: flex-end;
-    margin: 2px;
+.Boxlogin {
+  /* border: 1px solid gray; */
+  background-color: var(--Box-login_e_brilho);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: fit-content;
+  height: auto;
+  padding: 20px;
+  padding-bottom: 50px;
+  border-radius: 10px;
+  box-shadow: 0px 10px 40px -12px var(--Box-login_e_brilho);
 }
-#email{
-    border: 1px solid gray;
-    border-radius: 2px;
-    padding: 4px;
-    height: 30px;
+.grupo {
+  display: flex;
+  margin-top: 10px;
+  justify-content: center;
+  flex-direction: column;
 }
-#senha{
-    border: 1px solid gray;
-    border-radius: 2px;
-    padding: 4px;
-    height: 30px;  
+.grupo-esqueci-senha {
+  width: 100%;
+  display: flex;
+  font-size: 12px;
+  justify-content: flex-end;
+  margin: 2px;
 }
-#button-login{
-    width: 100%;
-    padding: 5px;
-    margin: 10px;
-    background-color: #151320;
-    color: white;
-    border: none;
-    font: bold;
-    cursor: pointer;
-    border-radius: 2px;
+#email {
+  border: 1px solid gray;
+  border-radius: 2px;
+  padding: 4px;
+  height: 30px;
 }
-#button-login:hover{
-    background-color: #151320c5;
-    transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+#senha {
+  border: 1px solid gray;
+  border-radius: 2px;
+  padding: 4px;
+  height: 30px;
 }
-a{
-    text-decoration: none;
-    color: blue;
+#button-login {
+  width: 100%;
+  padding: 5px;
+  margin: 10px;
+  background-color: var(--Fundo_titulo_botao);
+  color: white;
+  border: none;
+  font: bold;
+  cursor: pointer;
+  border-radius: 2px;
 }
-a:hover{
-    text-decoration: none;
-    color: purple;
+#button-login:hover {
+  background-color: #151320c5;
+  transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+a {
+  text-decoration: none;
+  color: blue;
+}
+a:hover {
+  text-decoration: none;
+  color: purple;
 }
