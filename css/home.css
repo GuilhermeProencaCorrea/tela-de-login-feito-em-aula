@@ -1,12 +1,24 @@
+/* Cores por variáveis */
 :root{
     --Fundo:#151320;
     --Fundo_claro_body: #eceff1;
+    --Evento_hover_color: yellow;
 }
-body{
-    transition: 0.3ms;
-    background-color: var(--Fundo_claro_body);
+
+/* Estilo dos botões */
+button{
+    background-color: var(--Fundo);
+    color: var(--Fundo_claro_body);
+    font-weight: 600;
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
 }
-/* Barra de navegação */
+/* button:hover{
+    background-color: var(--Evento_hover_color);
+    color: var(--Fundo);
+} */
+/* nav - Barra de navegação */
 nav{
     background-color: var(--Fundo);
     display: flex;
@@ -18,65 +30,74 @@ nav{
     box-shadow: .5px .5px 10px .5px #000;   
     position: relative;
 }
-
-/* Colocar lista no estremo esquerdo da div nav */
+/* Colocar lista no estremo esquerdo e direito da barra de navegação */
 .nav-left{
     width: 50%;
-    height: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
-
-/* Colocar lista no estremo direito da div nav */
 .nav-right{
     width: 50%;
     display: flex;
-    align-items: center;
     justify-content: flex-end;
+    align-items: center;
 }
-
-/* Lista com links de navegação */
 main, ul{
-    color: #eceff1;
     display: flex;
     flex-direction: row;
-    margin: 10px;
-}
-
-/* Itens da links de navegação */
-main, ul, li{
-    margin: 10px;
-    color: #fff;
 }
 main, ul, li, a{
     transition: 0.3ms;
-    color: #fff;
+    margin: 5px;
+    color: var(--Fundo_claro_body);
 }
 main, ul, li, a:hover{
-    color: yellow;
-}
-input[type="checkbox"]{
-    display: none;    
+    color: var(--Evento_hover_color);
 }
 /* Corpo principal da página */
 main{
     display: flex;
-    flex-wrap: nowrap;
-    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     height: 100vh;
-    padding: 30px;
 }
+.area-botao{
+    display: flex;
+    align-items: center;
+    border: 1px solid red;
+    width: 100%;
+    height: fit-content;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.area-tabela{
+    border: 1px solid blue;
+    width: 100%;
+    height: 300px;
+}
+
 /* Rodapé da página */
 footer{
     background-color: var(--Fundo);
+    color: var(--Fundo_claro_body);
     width: 100%;
     height: 300px; 
     box-shadow: .5px 10px 10px 10px #000;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--Fundo_claro_body);
+}
+
+/* Dark mode*/
+body{
+    transition: 0.3ms;
+    background-color: var(--Fundo_claro_body);
+}
+
+input[type="checkbox"]{
+    display: none;    
 }
 .bi{
     /* font-size: 1.3rem; */
@@ -94,6 +115,7 @@ footer{
 .dark, .dark body{
     background-color: #151320;
     color: #fff;
+
 }
 .dark .bi-sun{
     display: none;
@@ -101,3 +123,4 @@ footer{
 .dark .bi-moon{
     display: block;
 }
+
