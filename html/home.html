@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -28,8 +28,9 @@
     <title>Home</title>
   </head>
   <body>
+    <!-- Barra de navegação -->
     <nav>
-      <!-- Navegação -->
+      <!-- Navegação página-->
       <div class="nav-left">
         <ul>
           <li><a href="">Cadastro de produtos</a></li>
@@ -63,6 +64,7 @@
       </div>
     </nav>
 
+    <!-- Coteúdo principal -->
     <main class="container mt-5 mb-5">
       <!-- Título -->
       <div class="container-fluid mt-3 titulo">
@@ -125,13 +127,12 @@
       </div>
       <!-- Modal -->
       <div class="row">
-        <!-- The Modal -->
-        <div class="modal" id="modal-cadastro-de-produto">
+        <div class="modal fade" id="modal-cadastro-de-produto">
           <div class="modal-dialog">
             <div class="modal-content">
               <!-- Modal Header -->
               <div class="modal-header">
-                <h4 class="modal-title">Modal Heading</h4>
+                <h4 class="modal-title">Cadastro de produtos</h4>
                 <button
                   type="button"
                   class="btn-close"
@@ -140,16 +141,39 @@
               </div>
 
               <!-- Modal body -->
-              <div class="modal-body">Modal body..</div>
+              <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <label for="nome" class="form-label">Nome</label>
+                        <input type="text" class="form-control" id="nome-produto" placeholder="Nome" name="nome">
+                    </div>
+                    <div class="col-sm-3">
+                        <label for="estoque" class="form-label">Estoque</label>
+                        <input type="estoque" class="form-control" id="estoque-produto" placeholder="0" name="estoque">
+                    </div>
+                    <div class="col-sm-9">
+                        <label for="valor" class="form-label">Valor</label>
+                        <input type="text" class="form-control" id="valor-produto" placeholder="R$" name="valor">
+                    </div>
+                    
+                </div>
+              </div>
 
               <!-- Modal footer -->
               <div class="modal-footer">
                 <button
                   type="button"
-                  class="btn btn-danger"
+                  id="btn-salvar"
+                  class="btn btn-primary btn-sm"
+                >
+                  Salvar
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-danger btn-sm"
                   data-bs-dismiss="modal"
                 >
-                  Close
+                  Cancelar
                 </button>
               </div>
             </div>
@@ -158,10 +182,12 @@
       </div>
     </main>
 
+    <!-- Rodapé -->
     <footer>
       <strong>Copyright © 2023 Guilhreme Proença Corrêa.</strong>
     </footer>
 
     <script src="./../Js/home.js"></script>
+    <script src="./../Js/cadastro-de-produto.js"></script>
   </body>
 </html>
