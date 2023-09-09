@@ -4,20 +4,19 @@
     --Fundo_claro_body: #eceff1;
     --Evento_hover_color: yellow;
 }
-
 /* Estilo dos botões */
-button{
+.botao-adicionar{
     background-color: var(--Fundo);
     color: var(--Fundo_claro_body);
     font-weight: 600;
     padding: 20px;
     border: none;
     border-radius: 5px;
+    cursor: pointer;
 }
-/* button:hover{
-    background-color: var(--Evento_hover_color);
-    color: var(--Fundo);
-} */
+.botao-adicionar:hover{
+    box-shadow: 0px 0px 10px 2px black;
+}
 /* nav - Barra de navegação */
 nav{
     background-color: var(--Fundo);
@@ -43,41 +42,18 @@ nav{
     justify-content: flex-end;
     align-items: center;
 }
-main, ul{
+nav, ul{
     display: flex;
     flex-direction: row;
 }
-main, ul, li, a{
+ul, li, a{
     transition: 0.3ms;
     margin: 5px;
     color: var(--Fundo_claro_body);
 }
-main, ul, li, a:hover{
+ul, li, a:hover{
     color: var(--Evento_hover_color);
 }
-/* Corpo principal da página */
-main{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 100vh;
-}
-.area-botao{
-    display: flex;
-    align-items: center;
-    border: 1px solid red;
-    width: 100%;
-    height: fit-content;
-    padding: 10px;
-    margin-bottom: 20px;
-}
-.area-tabela{
-    border: 1px solid blue;
-    width: 100%;
-    height: 300px;
-}
-
 /* Rodapé da página */
 footer{
     background-color: var(--Fundo);
@@ -89,7 +65,6 @@ footer{
     align-items: center;
     justify-content: center;
 }
-
 /* Dark mode*/
 body{
     transition: 0.3ms;
@@ -115,7 +90,6 @@ input[type="checkbox"]{
 .dark, .dark body{
     background-color: #151320;
     color: #fff;
-
 }
 .dark .bi-sun{
     display: none;
@@ -123,4 +97,37 @@ input[type="checkbox"]{
 .dark .bi-moon{
     display: block;
 }
-
+.dark nav{
+    box-shadow: .5px .5px 10px .5px #fff;  
+}
+.dark .botao-adicionar{
+    background-color: #322d4b;
+    color: var(--Fundo_claro_body);
+    font-weight: 600;
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+}
+.dark .botao-adicionar:hover{
+    box-shadow: 0px 0px 10px 2px white;
+}
+.titulo{
+    color: #000;
+}
+.dark .titulo{
+    color: #fff;
+}
+/* Evento hover no botão editar e excluir */
+.bi-pencil:hover{
+    color: aqua;
+}
+.bi-trash:hover{
+    color: red;
+}
+.table{
+    box-shadow: 0px 0px 10px 0px gray;
+}
+table.table>thead>tr th{
+    background-color: #151320;
+    color: #fff;
+}

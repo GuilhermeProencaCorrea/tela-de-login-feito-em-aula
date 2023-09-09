@@ -1,59 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="./../css/reset.css">
-    <link rel="stylesheet" href="./../css/home.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="./../css/reset.css" />
+    <link rel="stylesheet" href="./../css/home.css" />
 
     <title>Home</title>
-</head>
-<body>
-    <div class="container">
-        <nav>  
-            <div class="nav-left">
-                <ul>
-                    <li><a href="">Cadastro produto</a></li>
-                    <li><a href="">Clientes</a></li>
-                    <li><a href="">Produtos</a></li>
-                </ul>
-            </div>            
-            <div class="nav-right">
-                <ul>
-                    <li>
-                        <input type="checkbox" name="change-theme" id="change-theme">
-                        <label for="change-theme">
-                            <i class="bi bi-sun"></i>
-                            <i class="bi bi-moon"></i>
-                        </label>
-                    </li>
-                    <li>
-                        <a href="">admin@gmail.com
-                            <i class="bi bi-person"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">Sair
-                            <i class="bi bi-door-open-fill"></i>
-                        </a>
-                    </li>  
-                </ul>
-            </div>
-        </nav>
-        <main class="container-tabela">
-            <div class="area-botao">
-                <button class="botao-adicionar">ADICIONAR</button>
-            </div>
-            <div  class="area-tabela">
+  </head>
+  <body>
+    <nav>
+      <!-- Navegação -->
+      <div class="nav-left">
+        <ul>
+          <li><a href="">Cadastro de produtos</a></li>
+          <li><a href="">Clientes</a></li>
+          <li><a href="">Produtos</a></li>
+        </ul>
+      </div>
+      <!-- Usuário e sair -->
+      <div class="nav-right">
+        <ul>
+          <li>
+            <input type="checkbox" name="change-theme" id="change-theme" />
+            <label for="change-theme">
+              <i class="bi bi-sun"></i>
+              <i class="bi bi-moon"></i>
+            </label>
+          </li>
+          <li>
+            <a href=""
+              >admin@gmail.com
+              <i class="bi bi-person"></i>
+            </a>
+          </li>
+          <li>
+            <a href=""
+              >Sair
+              <i class="bi bi-door-open-fill"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
+    <main class="container mt-5 mb-5">
+      <!-- Título -->
+      <div class="container-fluid mt-3 titulo">
+        <h1>Cadastro de produtos</h1>
+        <hr />
+      </div>
+      <!-- Botão -->
+      <div class="container-fluid mt-3">
+        <button
+          id="adicionar"
+          type="button"
+          class="botao-adicionar"
+          data-bs-toggle="modal"
+          data-bs-target="#modal-cadastro-de-produto"
+        >
+          ADICIONAR
+        </button>
+      </div>
+      <!-- Tabela -->
+      <div class="container-fluid mt-3">
+        <table id="table" class="table table-striped table-bordered mt-5">
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Valor</th>
+              <th>Estoque</th>
+              <th>Editar</th>
+              <th>Remover</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Azeite</td>
+              <td>29,90</td>
+              <td>30</td>
+              <td>
+                <a href=""></a>
+                <i class="bi bi-pencil"></i>
+              </td>
+              <td>
+                <a href=""></a>
+                <i class="bi bi-trash"></i>
+              </td>
+            </tr>
+            <tr>
+              <td>Biscoite</td>
+              <td>5,50</td>
+              <td>30</td>
+              <td>
+                <a href=""></a>
+                <i class="bi bi-pencil"></i>
+              </td>
+              <td>
+                <a href=""></a>
+                <i class="bi bi-trash"></i>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- Modal -->
+      <div class="row">
+        <!-- The Modal -->
+        <div class="modal" id="modal-cadastro-de-produto">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h4 class="modal-title">Modal Heading</h4>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                ></button>
+              </div>
+
+              <!-- Modal body -->
+              <div class="modal-body">Modal body..</div>
+
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-danger"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
             </div>
-        </main>
-        <footer>
-            <strong>Copyright © 2023 Guilhreme Proença Corrêa.</strong>
-        </footer>
-    </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <strong>Copyright © 2023 Guilhreme Proença Corrêa.</strong>
+    </footer>
+
     <script src="./../Js/home.js"></script>
-</body>
+  </body>
 </html>
