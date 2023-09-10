@@ -36,31 +36,28 @@ nav {
 .nav-left {
   width: 50%;
   display: flex;
+  padding-top: 20px;
   justify-content: flex-start;
-  align-items: center;
 }
 .nav-right {
   width: 50%;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  padding-top: 20px;
+  justify-content: flex-end
 }
-nav,
-ul {
+ul{
   display: flex;
-  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
-ul,
-li,
-a {
+li > a {
   transition: 0.3ms;
   margin: 5px;
+  margin-top: 100px;
   color: var(--Fundo_claro_body);
   text-decoration: none;
 }
-ul,
-li,
-a:hover {
+ul > li > a:hover {
   color: var(--Evento_hover_color);
 }
 /* Rodapé da página */
@@ -155,5 +152,9 @@ table.table > thead > tr th {
 .dark .modal-dialog .modal-footer {
     background-color: #151320;
     color: #fff;
+}
+table>tbody>tr>td>a{
+    text-decoration: none;
+    margin: 5px;
 }
   
