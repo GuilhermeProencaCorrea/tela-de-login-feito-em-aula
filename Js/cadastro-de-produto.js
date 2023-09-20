@@ -1,9 +1,10 @@
+// Pegar produtos cadastrados na API
 const URL = 'http://localhost:3400/produtos';
 
 let tabelaProduto = document.querySelector('table>tbody');
 
-// Acessar a Api
-function trazerProdutos (){
+// Acessar a Api e trazer produtos
+function pegarProdutos (){
     
     fetch(URL, {
         method: 'GET'
@@ -14,12 +15,21 @@ function trazerProdutos (){
     })
     .catch()
 }
+pegarProdutos();
 
-// Montar a tabela de forma dinâmica
+function editarProduto(nome) {
+    alert('Editar produto: '+ nome)
+}
 
-function popularTabela(produto){
+function excluirProduto(nome) {
+    alert('Excluir produto: '+ nome)
+}
+
+// Montar a tabela de forma dinâmica, com os produtos obtidos
+
+function criarLinhaNaTabela(produto){
     // Criar a linha da tabela
-     console.log(produto)
+
     let linhaTR = document.createElement('tr');
 
     // Criar as TDs
@@ -36,10 +46,10 @@ function popularTabela(produto){
     estoqueTD.textContent = produto.quantidadeEstoque;
 
     acoesTD.innerHTML = `
-    <a href="" onclick="teste()">
+    <a href="" onclick="editarProduto(nome)">
     <i class="bi bi-pencil"></i>
     </a>
-    <a href="" onclick="teste()">
+    <a href="" onclick="excluirProduto(nome)">
     <i class="bi bi-trash"></i>
     </a>
     `;
@@ -55,17 +65,10 @@ function popularTabela(produto){
     // Adicionar as linha a tabela
 
     tabelaProduto.appendChild(linhaTR);
-
 }
 
-// Colocar o E-mail do usuário na tela
-
-function telaEmail() {
-
-}
-
-trazerProdutos();
-
-function teste() {
-    alert(':)');
+function popularTabela(produtos){
+    produtos.forEach(produto => {
+        criarLinhaNaTabela(produto)
+    });
 }
