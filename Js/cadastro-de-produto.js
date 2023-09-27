@@ -1,9 +1,15 @@
-// Pegar produtos cadastrados na API
 const URL = 'http://localhost:3400/produtos';
 
 let tabelaProduto = document.querySelector('table>tbody');
+let modalAdicionar = document.querySelector('.modal');
+let btnSalvar = document.querySelector('#btn-salvar');
 
-// Acessar a Api e trazer produtos
+btnSalvar.addEventListener('click',() => {
+
+modalAdicionar.Hide();
+});
+
+// Acessar a Api e pegar os produtos
 function pegarProdutos (){
     
     fetch(URL, {
@@ -16,17 +22,19 @@ function pegarProdutos (){
     .catch()
 }
 pegarProdutos();
-
-function editarProduto(nome) {
-    alert('Editar produto: '+ nome)
+// Acessar API é pegar o email do usuário
+function name(params) {
+    
 }
-
+// Modificar um produto na tabela
+function editarProduto(nome) {
+    alert('Editar produto: '+ nome.nome)
+}
+// Remover um produto da tabela
 function excluirProduto(nome) {
     alert('Excluir produto: '+ nome)
 }
-
-// Montar a tabela de forma dinâmica, com os produtos obtidos
-
+// Montar a tabela de forma dinâmica, com os produtos obtidos da API
 function criarLinhaNaTabela(produto){
     // Criar a linha da tabela
 
@@ -46,12 +54,12 @@ function criarLinhaNaTabela(produto){
     estoqueTD.textContent = produto.quantidadeEstoque;
 
     acoesTD.innerHTML = `
-    <a href="" onclick="editarProduto(nome)">
-    <i class="bi bi-pencil"></i>
-    </a>
-    <a href="" onclick="excluirProduto(nome)">
-    <i class="bi bi-trash"></i>
-    </a>
+    <a href="" onclick="teste()">
+                    <i class="bi bi-pencil"></i>
+                </a>
+                <a href="" onclick="teste()">
+                    <i class="bi bi-trash"></i>
+                </a>
     `;
 
     // Adicionar as TDs a linha
@@ -66,7 +74,7 @@ function criarLinhaNaTabela(produto){
 
     tabelaProduto.appendChild(linhaTR);
 }
-
+// Colocar dados na tabela
 function popularTabela(produtos){
     produtos.forEach(produto => {
         criarLinhaNaTabela(produto)

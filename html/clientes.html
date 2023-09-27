@@ -1,12 +1,198 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="./../css/reset.css" />
+    <link rel="stylesheet" href="./../css/base.css" />
+
+    <title>Home</title>
+  </head>
+  <body>
+    <!-- Barra de navegação -->
+    <nav>
+      <!-- Navegação entre páginas - lado esquedo da nav -->
+      <div class="nav-left">
+        <ul>
+          <li><a href="./cadastro-de-produto.html">Cadastro de Produtos</a></li>
+          <li><a href="./clientes.html">Clientes</a></li>
+          <li><a href="./produtos.html">Produtos</a></li>
+        </ul>
+      </div>
+      <!-- Botões de dark mode, e-mail do usuário e botão sair - lado direito da nav -->
+      <div class="nav-right">
+        <ul>
+          <li>
+            <!--Dark mode botões-->
+            <input type="checkbox" name="change-theme" id="change-theme" />
+            <label for="change-theme">
+              <i class="bi bi-sun"></i>
+              <i class="bi bi-moon"></i>
+            </label>
+          </li>
+          <li>
+            <!--E-mail do usuário cadastrado-->
+            <a href="" id="login"
+              >Aqui entra o email do usuário cadastrado
+              <samp><i class="bi bi-person"></i></samp>
+            </a>
+          </li>
+          <li>
+            <a href=""
+              >Sair
+              <samp><i class="bi bi-door-open-fill"></i></samp>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Coteúdo principal -->
+    <main class="container mt-5 mb-5">
+      <!-- Título -->
+      <div class="container-fluid mt-3 titulo">
+        <h1>Cadastro de Clientes</h1>
+        <hr />
+      </div>
+      <!-- Botão adicionar cliente-->
+      <div class="container-fluid mt-3">
+        <button
+          id="adicionar"
+          type="button"
+          class="botao-adicionar"
+          data-bs-toggle="modal"
+          data-bs-target="#modal-cadastro-de-cliente"
+        >
+          ADICIONAR
+        </button>
+      </div>
+      <!-- Tabela -->
+      <div class="container-fluid mt-3">
+        <table id="table" class="table table-striped table-bordered mt-5">
+          <thead><!--Cabeçalho da tabela-->
+            <tr><!--tr linha da tabela-->
+              <th>id</th><!--th coluna da tabela-->
+              <th>nome</th>
+              <th>cpf</th>
+              <th>e-mail</th>
+              <th>telefone</th>
+              <th>cadastro</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody><!--Conteúdo da tabela-->
+            <tr>
+              <!-- <td>1</td>
+              <td>Guilherme Proença Corrêa</td>
+              <td>578.894.975-78</td>
+              <td>guilhermeproencacorrea@gmail.com</td>
+              <td>(24) 98145-8970</td>
+              <td>38/03/2013</td>
+              <td>
+                <a href="" onclick="teste()">
+                    <i class="bi bi-pencil"></i>
+                </a>
+                <a href="" onclick="teste()">
+                    <i class="bi bi-trash"></i>
+                </a>
+              </td> -->
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- Modal -->
+      <div class="row">
+        <div class="modal fade" id="modal-cadastro-de-cliente">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h4 class="modal-title">Cadastro de Cliente</h4>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                ></button>
+              </div>
+
+              <!-- Modal body -->
+              <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-2">
+                      <label for="id" class="form-label">id</label>
+                      <input type="text" class="form-control" id="id-produto" placeholder="id" name="id" disabled>
+                    </div>                    
+                    <div class="col-sm-10">
+                        <label for="nome" class="form-label">Nome</label>
+                        <input type="text" class="form-control" id="nome-produto" placeholder="Nome" name="nome">
+                    </div>
+                    <div class="col-sm-4">
+                      <label for="cpf" class="form-label">Cpf</label>
+                      <input type="text" class="form-control" id="cpf-cliente" placeholder="Telefone" name="cpf">
+                  </div>
+                    <div class="col-sm-4">
+                      <label for="telefone" class="form-label">Telefone</label>
+                      <input type="text" class="form-control" id="telefone-cliente" placeholder="Telefone" name="telefone">
+                  </div>
+                  <div class="col-sm-4">
+                    <label for="data" class="form-label">Data</label>
+                    <input type="time" class="form-control" id="Data-cadastro-cliente" placeholder="E-mail" name="data">
+                </div>
+                    <div class="col-sm-12">
+                        <label for="email" class="form-label">E-mail</label>
+                        <input type="email" class="form-control" id="email-cliente" placeholder="E-mail" name="email">
+                    </div>
+                </div>
+              </div>
+
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  id="btn-salvar"
+                  class="btn btn-primary btn-sm"
+                >
+                  Salvar
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-danger btn-sm"
+                  data-bs-dismiss="modal"
+                >
+                  Cancelar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+      <strong>Copyright © 2023 Guilhreme Proença by UNIFAA.</strong>
+    </footer>
+
+    <script src="./../Js/dark-mode.js"></script>
+    <script src="./../Js/cadastro-de-cliente.js"></script>
+  </body>
 </html>
