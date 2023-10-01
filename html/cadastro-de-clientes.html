@@ -34,7 +34,7 @@
       <div class="nav-left">
         <ul>
           <li><a href="./cadastro-de-produto.html">Cadastro de Produtos</a></li>
-          <li><a href="./clientes.html">Clientes</a></li>
+          <li><a href="./cadastro-de-clientes.html">Clientes</a></li>
           <li><a href="./produtos.html">Produtos</a></li>
         </ul>
       </div>
@@ -139,27 +139,27 @@
                 <div class="row">
                     <div class="col-sm-2">
                       <label for="id" class="form-label">id</label>
-                      <input type="text" class="form-control" id="id-produto" placeholder="id" name="id" disabled>
+                      <input type="text" class="form-control" id="id" name="id" disabled>
                     </div>                    
                     <div class="col-sm-10">
                         <label for="nome" class="form-label">Nome</label>
-                        <input type="text" class="form-control" id="nome-produto" placeholder="Nome" name="nome">
+                        <input type="text" class="form-control" id="nome" name="nome">
                     </div>
                     <div class="col-sm-4">
                       <label for="cpf" class="form-label">Cpf</label>
-                      <input type="text" class="form-control" id="cpf-cliente" placeholder="Telefone" name="cpf">
+                      <input type="text" class="form-control" id="cpf" name="cpf">
                   </div>
                     <div class="col-sm-4">
                       <label for="telefone" class="form-label">Telefone</label>
-                      <input type="text" class="form-control" id="telefone-cliente" placeholder="Telefone" name="telefone">
+                      <input type="text" class="form-control" id="telefone" name="telefone">
                   </div>
                   <div class="col-sm-4">
                     <label for="data" class="form-label">Data</label>
-                    <input type="time" class="form-control" id="Data-cadastro-cliente" placeholder="E-mail" name="data">
+                    <input type="date" class="form-control" id="dataCadastro" name="data" disabled>
                 </div>
                     <div class="col-sm-12">
                         <label for="email" class="form-label">E-mail</label>
-                        <input type="email" class="form-control" id="email-cliente" placeholder="E-mail" name="email">
+                        <input type="email" class="form-control" id="email" name="email">
                     </div>
                 </div>
               </div>
@@ -175,6 +175,7 @@
                 </button>
                 <button
                   type="button"
+                  id="btn-cancelar"
                   class="btn btn-danger btn-sm"
                   data-bs-dismiss="modal"
                 >
@@ -194,5 +195,7 @@
 
     <script src="./../Js/dark-mode.js"></script>
     <script src="./../Js/cadastro-de-cliente.js"></script>
+    <script src="./../model/Cliente.js"></script>
+    <script src="./../Js/base.js"></script>
   </body>
 </html>
